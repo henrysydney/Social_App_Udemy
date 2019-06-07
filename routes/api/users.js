@@ -4,6 +4,7 @@ const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
+
 const { check, validationResult } = require("express-validator/check");
 
 const User = require("../../modules/User");
@@ -64,7 +65,7 @@ router.post(
       // Return jsonwebtoken
 
       const payload = {
-        users: {
+        user: {
           id: user.id
         }
       };
